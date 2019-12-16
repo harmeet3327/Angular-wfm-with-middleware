@@ -1,0 +1,33 @@
+<div class="">
+        <br/>
+        <div class="">
+            <h4 align="center">SUGGESTED RESOURCE</h4>
+        </div>
+    </div>
+    <br/>
+    <div class="container-fluid">
+        <table class="table table-striped table-hover ">
+                <tr>
+                    
+                    <th>NAME</th>
+                    <th>GENDER</th>
+                    <th>ROLE</th>
+                    <th>EXPERIENCE(in yrs)</th>
+                    <th>SKILLS</th>
+                    <th>Suggest</th>
+              
+                </tr>
+                <tr *ngFor="let sl of sugglist">
+             
+                        <td>{{sl.rName}}</td>
+                        <td>{{sl.rGender}}</td>
+                        <td>{{sl.role.roleType}}</td>
+                        <td>{{sl.rExperience}}</td>
+                        <td>{{sl.rSkills}}</td>
+                        <td><a class="btn btn-primary" (click)="LockResource(sl.rId);">Lock</a></td>
+                    </tr>   
+        </table>
+    </div>     
+    
+    
+    

@@ -1,0 +1,21 @@
+#lg
+{
+
+margin-left: 200px;
+text-decoration:line;
+}
+#wkm
+{
+margin-left: 5px;
+}
+#clicks
+{
+margin-left: 500px;;
+}
+#nav
+{
+background-color:lightgray;
+color:white;
+width:100%;
+position:fixed;
+}

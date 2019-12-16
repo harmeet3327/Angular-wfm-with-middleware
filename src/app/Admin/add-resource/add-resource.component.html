@@ -1,0 +1,94 @@
+
+
+<div class="container" id="container">
+    <div align="center"><h3><b>Add Resource Details</b></h3></div>
+<form  (ngSubmit)="AddFormSubmit();" [formGroup]="AddForm" >
+<table class="table table-striped">
+<tr class="form-group">
+    <td> Name : </td>
+    <td><input class="form-control" formControlName="rName"[class.is-invalid]="AddForm.get('rName').invalid && AddForm.get('rName').touched"/>
+        <small class="text-danger" [class.d-none]="AddForm.get('rName').valid || AddForm.get('rName').untouched">
+                MANDATORY TO ENTER NAME OF MORE THAN 3 CHARACTERS
+        </small>
+
+    </td>
+</tr>	
+<tr class="form-group">
+    <td>Experience : </td>
+    <td><input class="form-control" formControlName="rExperience" [class.is-invalid]="AddForm.get('rExperience').invalid && AddForm.get('rExperience').touched" />
+        <small class="text-danger" [class.d-none]="AddForm.get('rExperience').valid || AddForm.get('rExperience').untouched">
+                MANDATORY TO ENTER VALUE, RANGING FROM 0 TO 99 YRS
+        </small>    
+
+    </td>
+</tr>
+<tr class="form-group">
+    <td>Role</td>
+    <td>    
+        <select class="custom-select" formControlName="roleId"  [class.is-invalid]="AddForm.get('roleId').invalid && AddForm.get('roleId').touched">
+            <option *ngFor="let r of roleList" [value]="r.roleId">{{r.roleType}}</option>
+          </select>
+          <small class="text-danger" [class.d-none]="AddForm.get('roleId').valid || AddForm.get('roleId').untouched">
+                MANDATORY TO SELECT A VALUE
+        </small>
+
+    </td>
+
+
+</tr>
+<!-- <tr class="form-group">
+    <td>Password : </td>
+    <td><password class="form-control" formControlName="rPassward" value="T123"   />
+    
+    </td>
+</tr> -->
+<tr class="form-group">
+    <td>Marital Status : </td>             
+    <td>
+        <input type="radio" formControlName="rMaritalStatus" value="UNMARRIED" label="UnMarried" /> UNMARRIED
+        <input type="radio" formControlName="rMaritalStatus" value="MARRIED" label="Married" />MARRIED
+      
+    </td>         
+ </tr>
+<tr class="form-group">
+    <td>Email : </td>
+    <td><input type ="email" formControlName="rEmail" class="form-control" [class.is-invalid]="AddForm.get('rEmail').invalid && AddForm.get('rEmail').touched"/>
+        <small class="text-danger" [class.d-none]="AddForm.get('rEmail').valid || AddForm.get('rEmail').untouched">
+                MANDATORY TO ENTER VALID VALUE
+        </small>
+
+</tr>
+<tr class="form-group">
+    <td>Date of Birth  : </td>
+    <td><input type="date" formControlName="rDOB" class="form-control"  [class.is-invalid]="AddForm.get('rDOB').invalid && AddForm.get('rDOB').touched"/>
+        <small class="text-danger" [class.d-none]="AddForm.get('rDOB').valid || AddForm.get('rDOB').untouched">
+                MANDATORY TO ENTER A DATE
+        </small>
+
+    </td>
+</tr>
+<tr class="form-group">
+    <td>Select Gender  : </td>
+    <td><input type="radio"  formControlName="rGender" value="male" />male
+    <input type="radio"  formControlName="rGender" value="female" />female
+    <input type="radio"  formControlName="rGender" value="Others" />Others</td>
+   
+    
+</tr>
+<tr class="form-group">
+    <td>Phone no : </td>
+    <td><input type="number" formControlName="rPhoneNumber" class="form-control" [class.is-invalid]="AddForm.get('rPhoneNumber').invalid && AddForm.get('rPhoneNumber').touched"/>
+        <small class="text-danger" [class.d-none]="AddForm.get('rPhoneNumber').valid || AddForm.get('rPhoneNumber').untouched">
+                MANDATORY TO ENTER VALID 10 DIGIT PHONE NUMBER
+        </small>
+
+    </td>
+</tr>
+
+<tr><td></td><td><input type="submit" value="submit" class="btn btn-primary"/></td></tr>
+
+
+
+</table>
+</form>
+</div>

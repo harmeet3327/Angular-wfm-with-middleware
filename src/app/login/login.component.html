@@ -1,0 +1,34 @@
+
+<div id="bd">
+        <div class="container">
+                <div class="row">
+                    <div class="form_bg">
+                        <form (ngSubmit)="loginFormSubmit();" [formGroup]="loginForm">
+                             <h2 class="text-center"><b>SignIn</b></h2>
+                            <br/>
+                            <!-- <div>  ${msg} </div> -->
+                            <div class="form-group">
+                                <input  type="number" formControlName="rId" class="form-control" id="userid"
+                                [class.is-invalid]="rId.invalid && rId.touched"  placeholder="User id">
+                                <small class="text-danger" [class.d-none]="rId.valid || rId.untouched">
+                                        ENTER A VALID Id 
+                                      </small>
+                            
+                            </div>
+                            <div class="form-group">
+                                <input type="password" formControlName="rPassward" class="form-control" id="pwd"  placeholder="Password"
+                                [class.is-invalid]="rPassward.invalid && rPassward.touched">
+                                <small class="text-danger" [class.d-none]="rPassward.valid || rPassward.untouched">
+                                        PASSWORD IS MANDATORY
+                                      </small>
+                            
+                                </div>
+                                <br/>
+                               <div class="align-center">
+                            <button type="submit" class="btn btn-default" id="btn">Login</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
