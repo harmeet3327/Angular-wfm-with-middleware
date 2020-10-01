@@ -1,6 +1,6 @@
 # Wfm
 
-Workforce management  is an integrated set of processes that an uses to optimize the productivity of the developers & testers by fulfilling manpower requirement of a project. WFM involves effectively forecasting developer & tester requirements in various projects and deploying appropriate person into the project.
+Workforce management(WFM)  is an integrated set of processes that an uses to optimize the productivity of the developers & testers by fulfilling manpower requirement of a project. WFM involves effectively forecasting developer & tester requirements in various projects and deploying appropriate person into the project.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 Here in this project all the working is same but to smoothen the Webapp  Angular is used as frontend .
